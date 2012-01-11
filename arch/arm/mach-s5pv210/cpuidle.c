@@ -437,7 +437,8 @@ static int s5p_enter_idle_lowpower(struct cpuidle_device *dev,
 	return idle_time;
 }
 
-static int s5p_enter_idle_bm(struct cpuidle_device *dev, struct cpuidle_state *state)
+static int s5p_enter_idle_bm(struct cpuidle_device *dev,
+				struct cpuidle_state *state)
 {
 	if (s5p_idle_bm_check())
 		return s5p_enter_idle_normal(dev, state);
@@ -448,6 +449,7 @@ static int s5p_enter_idle_bm(struct cpuidle_device *dev, struct cpuidle_state *s
 int s5p_setup_lowpower(unsigned int mode)
 {
 	struct cpuidle_device *device;
+
 	int ret = 0;
 
 	cpuidle_pause_and_lock();

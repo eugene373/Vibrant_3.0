@@ -13,12 +13,12 @@ obj-				:=
 # Core support for S5PV210 system
 
 obj-$(CONFIG_CPU_S5PV210)	+= cpu.o init.o clock.o dma.o
-obj-$(CONFIG_CPU_S5PV210)	+= setup-i2c0.o
+obj-$(CONFIG_CPU_S5PV210)	+= setup-i2c0.o setup-i2c1.o setup-i2c2.o
 obj-$(CONFIG_S5PV210_PM)	+= pm.o sleep.o
 obj-$(CONFIG_CPU_FREQ)		+= cpufreq.o
 
 obj-$(CONFIG_S5PV210_POWER_DOMAIN)	+= power-domain.o
-obj-$(CONFIG_S5PV210_CORESIGHT) += coresight.o
+#obj-$(CONFIG_S5PV210_CORESIGHT) += coresight.o
 
 # machine support
 
@@ -52,6 +52,7 @@ obj-$(CONFIG_PHONE_CRESPO)	+= dev-aries-phone.o
 obj-y				+= dev-audio.o
 obj-y				+= dev-fiqdbg.o
 obj-$(CONFIG_S3C64XX_DEV_SPI)	+= dev-spi.o
+obj-y 				+= dev-onenand.o
 
 
 obj-$(CONFIG_S5P_ADC) += adc.o

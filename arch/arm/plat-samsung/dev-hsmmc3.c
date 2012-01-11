@@ -23,6 +23,7 @@
 #include <mach/map.h>
 #include <plat/sdhci.h>
 #include <plat/devs.h>
+#include <plat/cpu.h>
 
 #define S3C_SZ_HSMMC	(0x1000)
 
